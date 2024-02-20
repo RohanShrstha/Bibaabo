@@ -7,167 +7,98 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { IoCheckmark } from "react-icons/io5";
 import { MdEdit, MdDelete } from "react-icons/md";
 
-const Banner = () => {
+const eBimaAccount = () => {
   const bannerData = [
     {
       id: 1,
       imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/111-20240204124155-3L0r0F.PNG",
-      title: "hello",
-      subTitle: "asdasd",
-      page: "home",
-      feature: "feature1",
-      link: "-",
+        "http://139.59.41.77/storage/images/account/images/app-bannersartboard-1-copy-5-20240114204717-KsRPgu.png",
+      title: "Working Capital loan",
+      slug: "working-capital-loan",
+      type: "life",
+      icon: "http://139.59.41.77/storage/images/account/icons/rectangle-1153-20230912091636-FBcjw4.webp",
       display: (
         <div className="rounded-full bg-green-400 w-10 p-2 text-white">
           <IoCheckmark size={20} />
         </div>
       ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
+      addedOn: "Monday, February 19, 2024 4:03 PM",
     },
     {
       id: 2,
       imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/png-clipart-scholarship-student-loan-bank-money-graduates-people-logo-thumbnail-20240204123923-x8XN9H.png",
-      title: "hello",
-      subTitle: "hgc",
-      page: "home",
-      feature: "feature3",
-      link: "-",
+        "http://139.59.41.77/storage/images/account/icons/group-790-1-20240108171307-DZEzvG.png",
+      title: "Share Loan",
+      slug: "share-loan",
+      type: "life",
+      icon: "http://139.59.41.77/storage/images/banner/images/111-20240204124155-3L0r0F.PNG",
       display: (
         <div className="rounded-full bg-green-400 w-10 p-2 text-white">
           <IoCheckmark size={20} />
         </div>
       ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
+      addedOn: "Monday, February 19, 2024 4:21 PM",
     },
+
     {
       id: 3,
       imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/eagle-thumbnail-20240204122845-ZDxctp.png",
-      title: "hey",
-      subTitle: "sdfs",
-      page: "eloan",
-      feature: "feature2",
-      link: "-",
+        "http://139.59.41.77/storage/images/account/images/app-bannersartboard-1-copy-9-20240114204738-QuwCDr.png",
+      title: "Education Loan",
+      slug: "education-loan",
+      type: "life",
+      icon: "http://139.59.41.77/storage/images/account/icons/group-786-20230912091656-ymbWEO.webp",
       display: (
         <div className="rounded-full bg-green-400 w-10 p-2 text-white">
           <IoCheckmark size={20} />
         </div>
       ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
+      addedOn: "Monday, February 19, 2024 4:03 PM",
     },
     {
       id: 4,
       imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/app-bannersartboard-1-copy-2-20240108174656-5AgXTB.png",
-      title: "banner",
-      subTitle: "bands",
-      page: "ds",
-      feature: "feature3",
-      link: "-",
+        "http://139.59.41.77/storage/images/account/images/app-bannersartboard-1-copy-13-20240114204724-QcTzi6.png",
+      title: "Vehicle loan",
+      slug: "vehicle-loan",
+      type: "life",
+      icon: "http://139.59.41.77/storage/images/account/icons/group-788-20230912091647-ct5aHH.webp",
       display: (
         <div className="rounded-full bg-green-400 w-10 p-2 text-white">
           <IoCheckmark size={20} />
         </div>
       ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
+      addedOn: "Monday, February 19, 2024 4:03 PM",
     },
     {
       id: 5,
       imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/app-bannersartboard-1-copy-8-20240114204345-lvhkuN.png",
-      title: "dsdsds",
-      subTitle: "dssddsds",
-      page: "home",
-      feature: "feature4",
-      link: "-",
+        "http://139.59.41.77/storage/images/banner/images/111-20240204124155-3L0r0F.PNG",
+      title: "Business Loan",
+      slug: "business-loan",
+      type: "life",
+      icon: "http://139.59.41.77/storage/images/account/icons/group-1202-20230912102414-ktmuxn-20240110061647-jq2Uzo.png",
       display: (
         <div className="rounded-full bg-green-400 w-10 p-2 text-white">
           <IoCheckmark size={20} />
         </div>
       ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
+      addedOn: "Monday, February 19, 2024 4:03 PM",
     },
     {
       id: 6,
       imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/app-bannersartboard-1-copy-4-20240108174639-XQ0tUK.png",
-      title: "dsdsdss",
-      subTitle: "sad",
-      page: "home",
-      feature: "feature0",
-      link: "-",
+        "http://139.59.41.77/storage/images/account/images/app-bannersartboard-1-copy-15-20240114204710-PC8JRn.png",
+      title: "Personal Loan",
+      slug: "personal-loan",
+      type: "life",
+      icon: "http://139.59.41.77/storage/images/account/icons/group-337-20240108171314-189n9l.png",
       display: (
         <div className="rounded-full bg-green-400 w-10 p-2 text-white">
           <IoCheckmark size={20} />
         </div>
       ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
-    },
-    {
-      id: 7,
-      imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/111-20240204124155-3L0r0F.PNG",
-      title: "hello",
-      subTitle: "hgc",
-      page: "home",
-      feature: "feature3",
-      link: "-",
-      display: (
-        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
-          <IoCheckmark size={20} />
-        </div>
-      ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
-    },
-    {
-      id: 8,
-      imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/111-20240204124155-3L0r0F.PNG",
-      title: "hello",
-      subTitle: "hgc",
-      page: "home",
-      feature: "feature3",
-      link: "-",
-      display: (
-        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
-          <IoCheckmark size={20} />
-        </div>
-      ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
-    },
-    {
-      id: 9,
-      imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/111-20240204124155-3L0r0F.PNG",
-      title: "hello",
-      subTitle: "hgc",
-      page: "home",
-      feature: "feature3",
-      link: "-",
-      display: (
-        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
-          <IoCheckmark size={20} />
-        </div>
-      ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
-    },
-    {
-      id: 10,
-      imageUrl:
-        "http://139.59.41.77/storage/images/banner/images/111-20240204124155-3L0r0F.PNG",
-      title: "hello",
-      subTitle: "hgc",
-      page: "home",
-      feature: "feature3",
-      link: "-",
-      display: (
-        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
-          <IoCheckmark size={20} />
-        </div>
-      ),
-      addedOn: "Sunday, February 18, 2024 5:09 PM",
+      addedOn: "Monday, February 19, 2024 4:03 PM",
     },
   ];
 
@@ -193,7 +124,7 @@ const Banner = () => {
                   <header className="px-5 py-1 border-b border-gray-100">
                     <div className="flex items-center justify-between mb-2">
                       <h2 className="card-title text-xl">
-                        All <b>Banners</b>
+                        All <b>Bima Account Types</b>
                       </h2>
                       <button className="bg-greenbtn hover:bg-activegreenbtn text-white px-4 py-2 rounded inline-flex items-center">
                         <IoIosAddCircleOutline />
@@ -232,32 +163,28 @@ const Banner = () => {
                             </th>
                             <th className="whitespace-nowrap">
                               <div className="font-semibold text-center">
-                                Sub Title
+                                Slug
                               </div>
                             </th>
                             <th className="whitespace-nowrap">
                               <div className="font-semibold text-center">
-                                Page
+                                Type
+                              </div>
+                            </th>
+                            <th className="whitespace-nowrap">
+                              <div className="font-semibold text-center">
+                                Icon
                               </div>
                             </th>
                             <th className=" whitespace-nowrap">
                               <div className="font-semibold text-center">
-                                Feature
-                              </div>
-                            </th>
-                            <th className="whitespace-nowrap w-20">
-                              <div className="font-semibold text-center">
-                                Link
-                              </div>
-                            </th>
-                            <th className="whitespace-nowrap">
-                              <div className="font-semibold text-center">
                                 Display
                               </div>
                             </th>
-                            <th className="whitespace-nowrap">
+
+                            <th className="pl-8 whitespace-nowrap">
                               <div className="font-semibold text-left">
-                                Added on
+                                Added On
                               </div>
                             </th>
                             <th className="p-2 whitespace-nowrap">
@@ -293,31 +220,36 @@ const Banner = () => {
                               </td>
                               <td className="p-4 whitespace-nowrap">
                                 <div className="text-left font-medium ">
-                                  {item.subTitle}
+                                  {item.slug}
+                                </div>
+                              </td>
+                              <td className="p-4 whitespace-nowrap">
+                                <div className="text-left font-medium ">
+                                  {item.type}
                                 </div>
                               </td>
                               <td className="p-4 whitespace-nowrap">
                                 <div className="text-left font-medium">
-                                  {item.page}
+                                  <div className="text-left">
+                                    {" "}
+                                    <img
+                                      src={item.icon}
+                                      style={{
+                                        width: "50px",
+                                        height: "50px",
+                                        borderRadius: "50%",
+                                      }}
+                                    />
+                                  </div>
                                 </div>
                               </td>
                               <td className="p-4 whitespace-nowrap">
-                                <div className="text-left font-medium">
-                                  {item.feature}
-                                </div>
-                              </td>
-                              <td className="p-8 whitespace-nowrap ">
-                                <div className="text-left font-medium w-200">
-                                  {item.link}
-                                </div>
-                              </td>
-                              <td className="p-2 whitespace-nowrap">
                                 <div className="text-left font-medium">
                                   {item.display}
                                 </div>
                               </td>
-                              <td className="p-2 whitespace-nowrap">
-                                <div className="text-left font-medium ">
+                              <td className="p-8 whitespace-nowrap ">
+                                <div className="text-left font-medium w-200">
                                   {item.addedOn}
                                 </div>
                               </td>
@@ -353,4 +285,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default eBimaAccount;

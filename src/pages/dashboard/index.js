@@ -12,10 +12,11 @@ const Dashboard = () => {
           <SideBar />
         </div>
         <div
-          className=" mt-20 h-full"
+          className="mt-20 mb-10 h-full w-full"
           style={{
             minHeight: "76.73vh",
             marginLeft: "260px",
+            marginRight: "30px",
           }}
         >
           {/* <div className="bg-gray-100 shadow-lg rounded-lg p-6">

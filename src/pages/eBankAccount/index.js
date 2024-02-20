@@ -103,7 +103,7 @@ const eBankAccount = () => {
           <SideBar />
         </div>
         <div
-          className="mt-20 h-full w-full"
+          className="mt-20 mb-10 h-full w-full"
           style={{
             minHeight: "76.73vh",
             marginLeft: "260px",
@@ -113,8 +113,8 @@ const eBankAccount = () => {
           <div className="p-8 rounded-lg shadow-xl text-center">
             <div className="card-body">
               <section>
-                <div class="flex flex-col justify-center h-full">
-                  <header class="px-5 py-1 border-b border-gray-100">
+                <div className="flex flex-col justify-center h-full">
+                  <header className="px-5 py-1 border-b border-gray-100">
                     <div className="flex items-center justify-between mb-2">
                       <h2 className="card-title text-xl">
                         All <b>Account Types</b>
@@ -134,50 +134,62 @@ const eBankAccount = () => {
                       style={{ width: "100%" }}
                     />
                   </div>
-                  <div class="p-3">
-                    <div class="overflow-x-auto">
-                      <table class="table-auto w-full">
-                        <thead class="text-md font-bold">
+                  <div className="p-3">
+                    <div className="overflow-x-auto">
+                      <table className="table-auto w-full">
+                        <thead className="text-md font-bold">
                           <tr>
-                            <th class="p-2 whitespace-nowrap">
-                              <div class="font-semibold text-left">S.N.</div>
+                            <th className="p-2 whitespace-nowrap">
+                              <div className="font-semibold text-left">
+                                S.N.
+                              </div>
                             </th>
-                            <th class="p-2 whitespace-nowrap">
-                              <div class="font-semibold text-left">Image</div>
+                            <th className="p-2 whitespace-nowrap">
+                              <div className="font-semibold text-left">
+                                Image
+                              </div>
                             </th>
-                            <th class="p-2 whitespace-nowrap">
-                              <div class="font-semibold text-left">Title</div>
+                            <th className="p-2 whitespace-nowrap">
+                              <div className="font-semibold text-left">
+                                Title
+                              </div>
                             </th>
-                            <th class="whitespace-nowrap">
-                              <div class="font-semibold text-center">Slug</div>
+                            <th className="whitespace-nowrap">
+                              <div className="font-semibold text-center">
+                                Slug
+                              </div>
                             </th>
-                            <th class="whitespace-nowrap">
-                              <div class="font-semibold text-center">Icon</div>
+                            <th className="whitespace-nowrap">
+                              <div className="font-semibold text-center">
+                                Icon
+                              </div>
                             </th>
-                            <th class=" whitespace-nowrap">
-                              <div class="font-semibold text-center">
+                            <th className=" whitespace-nowrap">
+                              <div className="font-semibold text-center">
                                 Display
                               </div>
                             </th>
 
-                            <th class="pl-8 whitespace-nowrap">
-                              <div class="font-semibold text-left">
+                            <th className="pl-8 whitespace-nowrap">
+                              <div className="font-semibold text-left">
                                 Added On
                               </div>
                             </th>
-                            <th class="p-2 whitespace-nowrap">
-                              <div class="font-semibold text-left">Actions</div>
+                            <th className="p-2 whitespace-nowrap">
+                              <div className="font-semibold text-left">
+                                Actions
+                              </div>
                             </th>
                           </tr>
                         </thead>
-                        <tbody class="text-sm divide-y divide-gray-100">
+                        <tbody className="text-sm divide-y divide-gray-100">
                           {bannerData.map((item) => (
                             <tr key={item.id} className="p-4 text-center">
                               {" "}
-                              {/* Add a class for styling */}
+                              {/* Add a className for styling */}
                               <td className="">{item.id}</td>
-                              <td class="p-2 whitespace-nowrap">
-                                <div class="text-left">
+                              <td className="p-2 whitespace-nowrap">
+                                <div className="text-left">
                                   {" "}
                                   <img
                                     src={item.imageUrl}
@@ -189,19 +201,19 @@ const eBankAccount = () => {
                                   />
                                 </div>
                               </td>
-                              <td class="p-4 whitespace-nowrap">
-                                <div class="text-left font-medium">
+                              <td className="p-4 whitespace-nowrap">
+                                <div className="text-left font-medium">
                                   {item.title}
                                 </div>
                               </td>
-                              <td class="p-4 whitespace-nowrap">
-                                <div class="text-left font-medium ">
+                              <td className="p-4 whitespace-nowrap">
+                                <div className="text-left font-medium ">
                                   {item.slug}
                                 </div>
                               </td>
-                              <td class="p-4 whitespace-nowrap">
-                                <div class="text-left font-medium">
-                                  <div class="text-left">
+                              <td className="p-4 whitespace-nowrap">
+                                <div className="text-left font-medium">
+                                  <div className="text-left">
                                     {" "}
                                     <img
                                       src={item.icon}
@@ -214,18 +226,18 @@ const eBankAccount = () => {
                                   </div>
                                 </div>
                               </td>
-                              <td class="p-4 whitespace-nowrap">
-                                <div class="text-left font-medium">
+                              <td className="p-4 whitespace-nowrap">
+                                <div className="text-left font-medium">
                                   {item.display}
                                 </div>
                               </td>
-                              <td class="p-8 whitespace-nowrap ">
-                                <div class="text-left font-medium w-200">
+                              <td className="p-8 whitespace-nowrap ">
+                                <div className="text-left font-medium w-200">
                                   {item.addedOn}
                                 </div>
                               </td>
-                              <td class="p-2 whitespace-nowrap">
-                                <div class="text-left font-medium">
+                              <td className="p-2 whitespace-nowrap">
+                                <div className="text-left font-medium">
                                   <div className="flex">
                                     <button className="border border-green-400 bg-white hover:bg-green-400 text-green-400 hover:text-white py-1 px-3 rounded inline-flex items-center mr-2">
                                       <span className="pr-1">Edit</span>

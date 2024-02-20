@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "tailwindcss/tailwind.css";
 import NavBarComponent from "../components/NavBarComponent";
 import SideBar from "../components/SideBar";
@@ -73,7 +73,138 @@ const bank = () => {
       type: "Class A",
       addedOn: "February 19, 2024 4:31 PM",
     },
+    {
+      id: 4,
+      imageUrl:
+        "http://139.59.41.77/storage/images/bank/logos/download-18-20230901081927-zMmjOF.png",
+      title: "Maachhapuchhre Bank Limited",
+      routing: "MBBEMYKL",
+      contact: "+977-01-5970555",
+      display: (
+        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
+          <IoCheckmark size={20} />
+        </div>
+      ),
+      featured: (
+        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
+          <IoCheckmark size={20} />
+        </div>
+      ),
+      rating: "A",
+      type: "Class A",
+      addedOn: "February 19, 2024 4:31 PM",
+    },
+    {
+      id: 5,
+      imageUrl:
+        "http://139.59.41.77/storage/images/bank/logos/download-13-20230901081555-KfslNw.jfif",
+      title: "Sanima Bank Limited",
+      routing: "SNMANPKA	",
+      contact: "+977-1-5970133",
+      display: (
+        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
+          <IoCheckmark size={20} />
+        </div>
+      ),
+      featured: (
+        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
+          <IoCheckmark size={20} />
+        </div>
+      ),
+      rating: "A",
+      type: "Class A",
+      addedOn: "February 19, 2024 4:31 PM",
+    },
+    {
+      id: 6,
+      imageUrl:
+        "http://139.59.41.77/storage/images/bank/logos/download-12-20230901081122-MPnwd5.jfif",
+      title: "Sunrise Bank Limited",
+      routing: "SRBLNPKA	",
+      contact: "4004560, 4004561, 4004562",
+      display: (
+        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
+          <IoCheckmark size={20} />
+        </div>
+      ),
+      featured: (
+        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
+          <IoCheckmark size={20} />
+        </div>
+      ),
+      rating: "A",
+      type: "Class A",
+      addedOn: "February 19, 2024 4:31 PM",
+    },
+    {
+      id: 7,
+      imageUrl:
+        "http://139.59.41.77/storage/images/bank/logos/download-13-20230901080803-BcL5gD.png",
+      title: "Citizens Bank Limited",
+      routing: "CTZNNPKA",
+      contact: "01-4527842/43/24",
+      display: (
+        <div className="rounded-full bg-red-600 w-10 p-2 text-white">
+          <RxCross1 size={20} />
+        </div>
+      ),
+      featured: (
+        <div className="rounded-full bg-green-400 w-10 p-2 text-white">
+          <IoCheckmark size={20} />
+        </div>
+      ),
+      rating: "A",
+      type: "Class A",
+      addedOn: "February 19, 2024 4:31 PM",
+    },
   ];
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
+  const handleDropdownItemClick = () => {
+    // Handle dropdown item click if needed
+    closeDropdown();
+  };
+
+  const dropdownContent = (
+    <div
+      id="dropdown"
+      className={`${
+        isDropdownOpen ? "block" : "hidden"
+      } z-10 rounded-lg shadow w-26`}
+    >
+      <ul className="py-2 text-sm text-gray-100 dark:text-gray-200 bg-gray-700 text-gray-200">
+        <li>
+          <a href="#" className="block px-2 hover:bg-gray-500 ">
+            Branches
+          </a>
+        </li>
+        <li>
+          <a href="#" className="block px-2 hover:bg-gray-500 ">
+            Account Types
+          </a>
+        </li>
+        <li>
+          <a href="#" className="block px-2 hover:bg-gray-500">
+            Service Types
+          </a>
+        </li>
+        <li>
+          <a href="#" className="block px-2 hover:bg-gray-500">
+            Loan Types
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
 
   return (
     <div>
@@ -83,11 +214,12 @@ const bank = () => {
           <SideBar />
         </div>
         <div
-          className="mt-20 h-full w-full"
+          className="mt-20 mb-10 h-full w-full"
           style={{
             minHeight: "76.73vh",
             marginLeft: "260px",
             marginRight: "30px",
+            maxWidth: "80vw",
           }}
         >
           <div className="p-8 rounded-lg shadow-xl text-center">
@@ -114,9 +246,9 @@ const bank = () => {
                       style={{ width: "100%" }}
                     />
                   </div>
-                  <div class="p-3">
-                    <div class="overflow-x-auto">
-                      <table class="table-auto w-full">
+                  <div class="p-3 ">
+                    <div class="overflow-x-auto antialiased">
+                      <table class="table-auto w-full max-w-3xl mx-auto shadow-lg ">
                         <thead class="text-md font-bold">
                           <tr>
                             <th class="p-2 whitespace-nowrap">
@@ -166,13 +298,13 @@ const bank = () => {
                             </th>
                           </tr>
                         </thead>
-                        <tbody class="text-sm divide-y divide-gray-100">
+                        <tbody class="text-sm divide-y divide-gray-300">
                           {bannerData.map((item) => (
-                            <tr key={item.id} className="p-4 text-center">
+                            <tr key={item.id} className="p-6 text-center">
                               {" "}
                               {/* Add a class for styling */}
                               <td className="">{item.id}</td>
-                              <td class="p-2 whitespace-nowrap">
+                              <td class="p-0 whitespace-nowrap">
                                 <div class="text-left">
                                   {" "}
                                   <img
@@ -185,7 +317,7 @@ const bank = () => {
                                   />
                                 </div>
                               </td>
-                              <td class="p-4 whitespace-nowrap">
+                              <td class="p-6 whitespace-nowrap">
                                 <div class="text-left font-medium">
                                   {item.title}
                                 </div>
@@ -205,22 +337,22 @@ const bank = () => {
                                   {item.display}
                                 </div>
                               </td>
-                              <td class="p-8 whitespace-nowrap ">
+                              <td class="p-4 whitespace-nowrap ">
                                 <div class="text-left font-medium w-200">
                                   {item.featured}
                                 </div>
                               </td>
-                              <td class="p-2 whitespace-nowrap">
+                              <td class="p-4 whitespace-nowrap">
                                 <div class="text-left font-medium">
                                   {item.rating}
                                 </div>
                               </td>
-                              <td class="p-2 whitespace-nowrap">
+                              <td class="p-4 whitespace-nowrap">
                                 <div class="text-left font-medium ">
                                   {item.type}
                                 </div>
                               </td>
-                              <td class="p-2 whitespace-nowrap">
+                              <td class="p-6 whitespace-nowrap">
                                 <div class="text-left font-medium ">
                                   {item.addedOn}
                                 </div>
@@ -237,14 +369,14 @@ const bank = () => {
                                       <MdDelete size={16} />
                                     </button>
                                   </div>
-
+                                  {/* dropdown */}
                                   <button
                                     id="dropdownDefaultButton"
-                                    data-dropdown-toggle="dropdown"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    onClick={toggleDropdown}
+                                    class="text-white bg-blue-400  py-1 px-3 rounded inline-flex items-center mt-2"
                                     type="button"
                                   >
-                                    Dropdown button{" "}
+                                    Action{" "}
                                     <svg
                                       class="w-2.5 h-2.5 ms-3"
                                       aria-hidden="true"
@@ -261,49 +393,7 @@ const bank = () => {
                                       />
                                     </svg>
                                   </button>
-
-                                  <div
-                                    id="dropdown"
-                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                                  >
-                                    <ul
-                                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                      aria-labelledby="dropdownDefaultButton"
-                                    >
-                                      <li>
-                                        <a
-                                          href="#"
-                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                          Dashboard
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a
-                                          href="#"
-                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                          Settings
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a
-                                          href="#"
-                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                          Earnings
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a
-                                          href="#"
-                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                          Sign out
-                                        </a>
-                                      </li>
-                                    </ul>
-                                  </div>
+                                  {dropdownContent}
                                 </div>
                               </td>
                             </tr>
