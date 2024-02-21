@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "tailwindcss/tailwind.css";
+import Link from "next/link";
 import NavBarComponent from "../components/NavBarComponent";
 import SideBar from "../components/SideBar";
 import Footer from "../components/AdminFooter";
@@ -191,10 +192,12 @@ const eBima = () => {
                       <h2 className="card-title text-xl">
                         All <b>Banners</b>
                       </h2>
-                      <button className="bg-greenbtn hover:bg-activegreenbtn text-white px-4 py-2 rounded inline-flex items-center">
-                        <IoIosAddCircleOutline />
-                        <span>Add New</span>
-                      </button>
+                      <Link href="/eBima/create">
+                        <button className="bg-greenbtn hover:bg-activegreenbtn text-white px-4 py-2 rounded inline-flex items-center">
+                          <IoIosAddCircleOutline />
+                          <span>Add New</span>
+                        </button>
+                      </Link>
                     </div>
                   </header>
                   <div className="m-3 ">
