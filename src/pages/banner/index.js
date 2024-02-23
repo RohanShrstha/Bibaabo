@@ -6,6 +6,7 @@ import Footer from "../components/AdminFooter";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { IoCheckmark } from "react-icons/io5";
 import { MdEdit, MdDelete } from "react-icons/md";
+import Link from "next/link";
 
 const Banner = () => {
   const bannerData = [
@@ -195,10 +196,12 @@ const Banner = () => {
                       <h2 className="card-title text-xl">
                         All <b>Banners</b>
                       </h2>
-                      <button className="bg-greenbtn hover:bg-activegreenbtn text-white px-4 py-2 rounded inline-flex items-center">
-                        <IoIosAddCircleOutline />
-                        <span>Add New</span>
-                      </button>
+                      <Link href="/banner/create">
+                        <button className="bg-greenbtn hover:bg-activegreenbtn text-white px-4 py-2 rounded inline-flex items-center">
+                          <IoIosAddCircleOutline />
+                          <span>Add New</span>
+                        </button>
+                      </Link>
                     </div>
                   </header>
                   <div className="m-3 ">
